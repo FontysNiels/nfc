@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
+        vers less
         <button onClick={() => onHandleAction({ scan: 'scanning' })} className="btn">Scan</button>
       </div>
     </div>
