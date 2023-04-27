@@ -24,7 +24,7 @@ function App() {
           <button onClick={()=>onHandleAction({scan: 'scanning', write: null})} className="btn">Scan</button>
           <button onClick={()=>onHandleAction({scan: null, write: 'writing'})} className="btn">Write</button>
         </div>
-        <p>Version 1.</p>
+        <p>Version 2.</p>
         <ActionsContext.Provider value={actionsValue}>
           {scan && <Scan/>}
           {write && <Write/>}
