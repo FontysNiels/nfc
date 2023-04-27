@@ -59,7 +59,7 @@ const Scan = () => {
 
     return(
         <>
-         <p>Version 1.</p>
+         
             {actions.scan === 'scanned' ?  
             <div>
                
