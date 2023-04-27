@@ -26,7 +26,7 @@ function App() {
         <p>Version Less.</p>
         <ActionsContext.Provider value={actionsValue}>
           {scan && <Scan/>}
-          {write && <Write/>}
+
         </ActionsContext.Provider>
       </div>
   );
