@@ -20,8 +20,8 @@ function App() {
         <img src={nfc} className="App-logo" alt="logo" />
         <h1>NFC Tool</h1>
         <div className="App-container">
-          <button onClick={()=>onHandleAction({scan: 'scanning', write: null})} className="btn">Scan</button>
-          <button onClick={()=>onHandleAction({scan: null, write: 'writing'})} className="btn">Write</button>
+          <button onClick={()=>onHandleAction({scan: 'scanning'})} className="btn">Scan</button>
+          <button onClick={()=>onHandleAction({scan: null})} className="btn">Write</button>
         </div>
         <p>Version Less.</p>
         <ActionsContext.Provider value={actionsValue}>
