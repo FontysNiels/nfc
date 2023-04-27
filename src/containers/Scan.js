@@ -56,12 +56,13 @@ const Scan = () => {
         scan();
     }, [scan]);
 
-    console.log("v1.")
+
     return(
         <>
+         <p>Version 1.</p>
             {actions.scan === 'scanned' ?  
             <div>
-                <p>Version 1.</p>
+               
                 <p>Serial Number: {serialNumber}</p>
                 <p>Message: {message}</p>
 
