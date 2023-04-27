@@ -21,6 +21,9 @@ const Scan = () => {
                 
                 ndef.onreading = event => {
                     console.log("NDEF message read.");
+                    console.log("ndef: "+ ndef.toString())
+                    console.log("event: "+ event.toString())
+                    
                     onReading(event);
                     setData(event.toString())
                     setActions({
@@ -37,6 +40,10 @@ const Scan = () => {
 
     const onReading = ({message, serialNumber}) => {
         setSerialNumber(serialNumber);
+        console.log("message: "+ message.toString())
+        console.log("serial: "+ serialNumber.toString())
+
+        
         for (const record of message.records) {
             switch (record.recordType) {
                 case "text":
