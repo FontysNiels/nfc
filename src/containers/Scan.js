@@ -22,7 +22,7 @@ const Scan = () => {
                 ndef.onreading = event => {
                     console.log("NDEF message read.");
                     onReading(event);
-                    setData(event)
+                    setData(event.toString())
                     setActions({
                         scan: 'scanned',
                         write: null
@@ -66,7 +66,7 @@ const Scan = () => {
                 <p>Serial Number: {serialNumber}</p>
                 <p>Message: {message}</p>
 
-                <p>{data}</p>
+                <p>{data.toString()}</p>
             </div>
             : <Scanner status={actions.scan}></Scanner> }
         </>
