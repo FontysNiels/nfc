@@ -1,7 +1,6 @@
 import nfc from './nfc.svg';
 import './App.css';
 import Scan from './containers/Scan';
-import Write from './containers/Write';
 import { useState } from 'react';
 import { ActionsContext } from './contexts/context';
 
