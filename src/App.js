@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
-        <button onClick={() => onHandleAction({ scan: 'scanning', write: null })} className="btn">Scan</button>
+        <button onClick={() => onHandleAction({ scan: 'scanning' })} className="btn">Scan</button>
       </div>
     </div>
   );
