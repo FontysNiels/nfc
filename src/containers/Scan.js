@@ -6,44 +6,46 @@ const Scan = () => {
     const [message, setMessage] = useState('');
     const [data, setData] = useState('');
     const [serialNumber, setSerialNumber] = useState('');
-    const { actions, setActions} = useContext(ActionsContext);
+    const { actions, setActions } = useContext(ActionsContext);
 
-    const scan = useCallback(async() => {
-        if ('NDEFReader' in window) { 
-            try {
-                const ndef = new window.NDEFReader();
-                await ndef.scan();
-                
-                console.log("Scan started successfully.");
-                ndef.onreadingerror = () => {
-                    console.log("Cannot read data from the NFC tag. Try another one?");
-                };
-                
-                ndef.onreading = event => {
-                    console.log("NDEF message read.");
-                    console.log("ndef: "+ ndef.toString())
-                    console.log("event: "+ event.toString())
-                    
-                    onReading(event);
-                    setData(event.toString())
-                    setActions({
-                        scan: 'scanned',
-                        write: null
-                    });
-                };
+    const scan = useCallback(async () => {
+        if ('NDEFReader' in window) {
+            console.log("got it")
+ 
+            // try {
+            //     const ndef = new window.NDEFReader();
+            //     await ndef.scan();
 
-            } catch(error){
-                console.log(`Error! Scan failed to start: ${error}.`);
-            };
+            //     console.log("Scan started successfully.");
+            //     ndef.onreadingerror = () => {
+            //         console.log("Cannot read data from the NFC tag. Try another one?");
+            //     };
+
+            //     ndef.onreading = event => {
+            //         console.log("NDEF message read.");
+            //         console.log("ndef: "+ ndef.toString())
+            //         console.log("event: "+ event.toString())
+
+            //         onReading(event);
+            //         setData(event.toString())
+            //         setActions({
+            //             scan: 'scanned',
+            //             write: null
+            //         });
+            //     };
+
+            // } catch(error){
+            //     console.log(`Error! Scan failed to start: ${error}.`);
+            // };
         }
-    },[setActions]);
+    }, [setActions]);
 
-    const onReading = ({message, serialNumber}) => {
+    const onReading = ({ message, serialNumber }) => {
         setSerialNumber(serialNumber);
-        console.log("message: "+ message.toString())
-        console.log("serial: "+ serialNumber.toString())
+        console.log("message: " + message.toString())
+        console.log("serial: " + serialNumber.toString())
 
-        
+
         for (const record of message.records) {
             switch (record.recordType) {
                 case "text":
@@ -54,8 +56,8 @@ const Scan = () => {
                     // TODO: Read URL record with record data.
                     break;
                 default:
-                    // TODO: Handle other records with record data.
-                }
+                // TODO: Handle other records with record data.
+            }
         }
     };
 
@@ -64,18 +66,14 @@ const Scan = () => {
     }, [scan]);
 
 
-    return(
+    return (
         <>
-         
-            {actions.scan === 'scanned' ?  
-            <div>
-               
-                <p>Serial Number: {serialNumber}</p>
-                <p>Message: {message}</p>
-
-                <p>{data.toString()}</p>
-            </div>
-            : <Scanner status={actions.scan}></Scanner> }
+            {actions.scan === 'scanned' ?
+                <div>
+                    <p>Serial Number: {serialNumber}</p>
+                    <p>Message: {message}</p>
+                </div>
+                : <Scanner status={actions.scan}></Scanner>}
         </>
     );
 };
