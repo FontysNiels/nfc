@@ -12,11 +12,7 @@ const Scan = () => {
         if ('NDEFReader' in window) {
             console.log("got it")
 
-            ndef.onreading = event => {
-                setActions({
-                    scan: 'scanned'
-                });
-            };
+
 
             //         setActions({
             //             scan: 'scanned',
