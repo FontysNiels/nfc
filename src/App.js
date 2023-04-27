@@ -17,16 +17,15 @@ function App() {
 
   return (
       <div className="App">
-        <img src={nfc} className="App-logo" alt="logo" />
-        <h1>NFC Tool</h1>
+        {/* <img src={nfc} className="App-logo" alt="logo" />
+        <h1>NFC Tool</h1> */}
         <div className="App-container">
           <button onClick={()=>onHandleAction({scan: 'scanning'})} className="btn">Scan</button>
-          <button onClick={()=>onHandleAction({scan: null})} className="btn">Write</button>
+          {/* <button onClick={()=>onHandleAction({scan: null})} className="btn">Write</button> */}
         </div>
-        <p>Version Less.</p>
+        <p>Version Less. 1</p>
         <ActionsContext.Provider value={actionsValue}>
           {scan && <Scan/>}
-
         </ActionsContext.Provider>
       </div>
   );
