@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nfc/static/css/main.c60e8f69.chunk.css",
-    "main.js": "/nfc/static/js/main.7c325655.chunk.js",
-    "main.js.map": "/nfc/static/js/main.7c325655.chunk.js.map",
+    "main.js": "/nfc/static/js/main.22dfa753.chunk.js",
+    "main.js.map": "/nfc/static/js/main.22dfa753.chunk.js.map",
     "runtime-main.js": "/nfc/static/js/runtime-main.e5ac00e3.js",
     "runtime-main.js.map": "/nfc/static/js/runtime-main.e5ac00e3.js.map",
     "static/js/2.e48a9875.chunk.js": "/nfc/static/js/2.e48a9875.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e5ac00e3.js",
     "static/js/2.e48a9875.chunk.js",
     "static/css/main.c60e8f69.chunk.css",
-    "static/js/main.7c325655.chunk.js"
+    "static/js/main.22dfa753.chunk.js"
   ]
 }
