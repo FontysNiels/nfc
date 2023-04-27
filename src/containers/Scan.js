@@ -4,11 +4,11 @@ import { ActionsContext } from '../contexts/context';
 
 const Scan = () => {
     const [message, setMessage] = useState('');
+    const [data, setData] = useState('');
     const [serialNumber, setSerialNumber] = useState('');
     const { actions, setActions} = useContext(ActionsContext);
 
     const scan = useCallback(async() => {
-
         if ('NDEFReader' in window) { 
             try {
                 const ndef = new window.NDEFReader();
@@ -22,6 +22,7 @@ const Scan = () => {
                 ndef.onreading = event => {
                     console.log("NDEF message read.");
                     onReading(event);
+                    setData(event)
                     setActions({
                         scan: 'scanned',
                         write: null
@@ -55,12 +56,15 @@ const Scan = () => {
         scan();
     }, [scan]);
 
+    console.log("v1.")
     return(
         <>
             {actions.scan === 'scanned' ?  
             <div>
                 <p>Serial Number: {serialNumber}</p>
                 <p>Message: {message}</p>
+
+                <p>{data}</p>
             </div>
             : <Scanner status={actions.scan}></Scanner> }
         </>
