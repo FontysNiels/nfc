@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/nfc/static/css/main.b0d45885.chunk.css",
-    "main.js": "/nfc/static/js/main.6354c006.chunk.js",
-    "main.js.map": "/nfc/static/js/main.6354c006.chunk.js.map",
-    "runtime-main.js": "/nfc/static/js/runtime-main.055a0632.js",
-    "runtime-main.js.map": "/nfc/static/js/runtime-main.055a0632.js.map",
-    "static/js/2.61a2adc2.chunk.js": "/nfc/static/js/2.61a2adc2.chunk.js",
-    "static/js/2.61a2adc2.chunk.js.map": "/nfc/static/js/2.61a2adc2.chunk.js.map",
-    "static/js/3.f0549659.chunk.js": "/nfc/static/js/3.f0549659.chunk.js",
-    "static/js/3.f0549659.chunk.js.map": "/nfc/static/js/3.f0549659.chunk.js.map",
+    "main.js": "/nfc/static/js/main.9ea12122.chunk.js",
+    "main.js.map": "/nfc/static/js/main.9ea12122.chunk.js.map",
+    "runtime-main.js": "/nfc/static/js/runtime-main.57184d51.js",
+    "runtime-main.js.map": "/nfc/static/js/runtime-main.57184d51.js.map",
+    "static/js/2.207e9d10.chunk.js": "/nfc/static/js/2.207e9d10.chunk.js",
+    "static/js/2.207e9d10.chunk.js.map": "/nfc/static/js/2.207e9d10.chunk.js.map",
+    "static/js/3.eeeb8694.chunk.js": "/nfc/static/js/3.eeeb8694.chunk.js",
+    "static/js/3.eeeb8694.chunk.js.map": "/nfc/static/js/3.eeeb8694.chunk.js.map",
     "index.html": "/nfc/index.html",
     "static/css/main.b0d45885.chunk.css.map": "/nfc/static/css/main.b0d45885.chunk.css.map",
-    "static/js/2.61a2adc2.chunk.js.LICENSE.txt": "/nfc/static/js/2.61a2adc2.chunk.js.LICENSE.txt",
+    "static/js/2.207e9d10.chunk.js.LICENSE.txt": "/nfc/static/js/2.207e9d10.chunk.js.LICENSE.txt",
     "static/media/nfc.1e1c9c72.svg": "/nfc/static/media/nfc.1e1c9c72.svg",
     "static/media/spinner.e8697d57.gif": "/nfc/static/media/spinner.e8697d57.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.055a0632.js",
-    "static/js/2.61a2adc2.chunk.js",
+    "static/js/runtime-main.57184d51.js",
+    "static/js/2.207e9d10.chunk.js",
     "static/css/main.b0d45885.chunk.css",
-    "static/js/main.6354c006.chunk.js"
+    "static/js/main.9ea12122.chunk.js"
   ]
 }
